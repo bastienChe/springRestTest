@@ -13,7 +13,7 @@ public class PersonService {
 	private final PersoneDAO personDao;
 	
 	@Autowired
-	public PersonService(@Qualifier("fakeDao") PersoneDAO personDao) {
+	public PersonService(@Qualifier("FakeDao") PersoneDAO personDao) {
 		this.personDao = personDao;
 	}
 	
