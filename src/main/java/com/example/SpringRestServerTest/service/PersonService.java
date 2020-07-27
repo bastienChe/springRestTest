@@ -1,5 +1,9 @@
 package com.example.SpringRestServerTest.service;
 
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -21,4 +25,11 @@ public class PersonService {
 		return personDao.addPerson(person);
 	}
 	
+	public List<Person> getAllPeople(){
+		return personDao.selectAllPeople();
+	}
+	
+	public Optional<Person> getPersonById(UUID id) {
+		return personDao.selectPersonById(id);
+	}
 }
